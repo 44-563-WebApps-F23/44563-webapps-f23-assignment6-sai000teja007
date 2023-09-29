@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <title>Author PAge</title>
+ <head>Author Entry Sai Teja Thatikonda</head>
+<body>
+<h2>Getting input</h2>
+
+<form>
+    <label for="secretAuthor">The hidden author name:</label>
+    <input type="password" id="secretAuthor" value="Dickens" required><br><br>
+
+    <label for="guessAuthor">Guess the author:</label>
+    <input type="text" id="guessAuthor" required><br><br>
+
+    <input type="button" value="Check the guess" onclick="checkAuthor()"><br><br>
+    <p id="result"></p>
+
+
+</form>
+
+<script>
+    let good = 0;
+    let oops = 0;
+
+    function checkAuthor() {
+        const secretAuthorInput = document.getElementById('secretAuthor').value;
+        const guessAuthorInput = document.getElementById('guessAuthor').value;
+
+        if (secretAuthorInput === guessAuthorInput) {
+            good++;
+            alert("You got it right!");
+        } else {
+            oops++;
+            alert("Sorry");
+        }
+        const resultElement = document.getElementById('result');
+        resultElement.innerHTML = `Correct Guesses: ${good} | Incorrect Guesses: ${oops}`;
+    }
+</script>
+
+</body>
+</html>
