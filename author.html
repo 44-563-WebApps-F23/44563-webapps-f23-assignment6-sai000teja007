@@ -55,24 +55,24 @@ function checkAuthor() {
 </script>
 
 <div id="image">
-    <img src="cities/Helsinki.jpg" id="cityimage" width="100px" height="100px" alt="Helsinki city" onclick="selectImage()">
+    <img src="Helsinki.jpg" id="cityimage" width="100px" height="100px" alt="Helsinki city" onclick="selectImage()">
 </div>
 <script>
 var useImage=1;
 function selectImage() {
     switch(useImage){
         case 1: 
-        document.getElementById('cityimage').src="cities/Tokyo.jpg";
+        document.getElementById('cityimage').src="Tokyo.jpg";
         useImage=2;
         break;
 
         case 2: 
-        document.getElementById('cityimage').src="cities/Toronto.jpeg";
+        document.getElementById('cityimage').src="Toronto.jpeg";
         useImage=3;
         break;
 
         case 3: 
-        document.getElementById('cityimage').src="cities/Helsinki.jpg";
+        document.getElementById('cityimage').src="Helsinki.jpg";
         useImage=1;
         break;
     }
